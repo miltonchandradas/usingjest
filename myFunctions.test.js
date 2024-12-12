@@ -17,6 +17,7 @@ describe("Jest Tests - Group 1", () => {
     })
 
     it ("Filter Get Posts using Axios", async () => {
-        expect((await filterGetPostsUsingAxios()).length).toBe(10)
+        expect((await filterGetPostsUsingAxios(1)).length).toBe(10)
     })
 })
+
