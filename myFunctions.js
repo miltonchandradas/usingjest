@@ -13,6 +13,8 @@ const getPostsUsingAxios = async () => {
   const response = await axios.get(
     "https://jsonplaceholder.typicode.com/posts"
   );
+  // Some computation goes here...
+  response.data.forEach(post => post.body = "User ID: " + post.userId);
   return response.data;
 };
 

@@ -31,7 +31,7 @@ describe("Jest Tests - Group 1", () => {
         },
       ],
     });
-    expect((await getPostsUsingAxios()).length).toBe(2);
+    expect((await getPostsUsingAxios())[0].body).toBe("User ID: 1");
   });
 
   it("Filter Get Posts using Axios", async () => {
@@ -55,6 +55,7 @@ describe("Jest Tests - Group 1", () => {
         },
       ],
     });
+
     expect((await filterGetPostsUsingAxios(1)).length).toBe(1);
     expect((await filterGetPostsUsingAxios(2)).length).toBe(1);
     expect((await filterGetPostsUsingAxios(3)).length).toBe(1);
