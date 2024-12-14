@@ -14,7 +14,7 @@ const getPostsUsingAxios = async () => {
     "https://jsonplaceholder.typicode.com/posts"
   );
   // Some computation goes here...
-  response.data.forEach(post => post.body = "User ID: " + post.userId);
+  response.data.forEach((post) => (post.body = "User ID: " + post.userId));
   return response.data;
 };
 
@@ -23,10 +23,12 @@ const filterGetPostsUsingAxios = async (userId) => {
   return posts.filter((post) => post.userId === userId);
 };
 
+const sumOfNumbers = (a, b) => a + b;
 
 module.exports = {
   squareNumbers,
   sumSquareNumbers,
   getPostsUsingAxios,
   filterGetPostsUsingAxios,
+  sumOfNumbers
 };
